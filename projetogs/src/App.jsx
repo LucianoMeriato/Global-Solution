@@ -7,7 +7,7 @@ function App() {
   return (
     <> 
       <Nav />
-      <Outlet />
+      <Outlet /> {/* Aqui será renderizada a rota filha */}
       <Footer />
     </>
   );

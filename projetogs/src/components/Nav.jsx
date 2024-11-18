@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { NavStyle } from '../css/NavStyle';
 
 const Nav = () => {
@@ -6,25 +6,31 @@ const Nav = () => {
         <NavStyle>
             <header>
                 <div className="nav container">
-                    {/* Logo e Nome */}
-                    <a href="#home" className="logo"><i className='bx bx-sun'></i> Energia Limpa</a>
+                    <Link to="/" className="logo">
+                        <i className='bx bx-home'></i> Energy
+                    </Link>
 
-                    
                     <input type="checkbox" id="menu" />
                     <label htmlFor="menu">
                         <i className='bx bx-menu' id="menu-icon"></i>
                     </label>
 
-                    {/* Links de navegação */}
                     <ul className="navbar">
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#solucao">Soluções</a></li> 
-                        <li><a href="#Projetos">Projetos</a></li> 
+                        <li>
+                            <NavLink to="/" activeClassName="active">Início</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/sobre" activeClassName="active">Sobre</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/solucao" activeClassName="active">Solução</NavLink> 
+                        </li>
                     </ul>
 
-                    {/* Botão de Ação */}
-                    <a href="/junte-se" className="btn">Login</a>
+                    <div className="auth-links">
+                        <Link to="/login" className="btn">Log In</Link>
+                        <Link to="/cadastrar" className="btn">Cadastro</Link>
+                    </div>
                 </div>
             </header>
         </NavStyle>

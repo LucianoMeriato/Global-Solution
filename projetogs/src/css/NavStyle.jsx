@@ -95,8 +95,8 @@ export const NavStyle = styled.section`
       flex-direction: column;
       background: #444444;
       text-align: center;
-      opacity: 0; /* Inicialmente escondido */
-      visibility: hidden; /* Inicialmente invisível */
+      opacity: 0; 
+      visibility: hidden; 
       transition: opacity 0.6s ease, visibility 0.6s ease;
     }
 
@@ -114,8 +114,8 @@ export const NavStyle = styled.section`
     }
 
     #menu:checked ~ .navbar {
-      opacity: 1; /* Torna o menu visível */
-      visibility: visible; /* Torna o menu visível */
+      opacity: 1; 
+      visibility: visible; 
     }
   }
 `;

@@ -10,15 +10,13 @@ import solucao from '../assets/solucao-img.png';
 const Home = () => {
     return (
         <HomeStyle>
-            {/* Seção inicial */}
             <section className="home container" id="home">
                 <div className="home-text">
                     <h1>Inovação para um<br />Consumo Energético<br />Inteligente</h1>
-                    <a href="#" className="btn">Saiba Mais</a>
+                    <a href="https://www.gov.br/mme/pt-br/assuntos/noticias/cop-29-mme-lanca-pacto-global-para-transicao-energetica-justa-e-inclusiva" className="btn">Saiba Mais</a>
                 </div>
             </section>
 
-            {/* Seção sobre */}
             <section className="about container" id="about">
                 <div className="about-img">
                     <img src={aboutImage} alt="Imagem sobre consumo inteligente" />
@@ -33,7 +31,7 @@ const Home = () => {
                         <li>- Recomendações de otimização baseadas em IA.</li>
                         <li>- Ferramentas para reduzir o desperdício e melhorar a eficiência.</li>
                     </ul>
-                    <a href="https://www.g20.org/pt-br/g20-social/grupos-de-engajamento/oceans-20" className="btn">Saiba Mais</a>
+                    <a href="https://go.pactoglobal.org.br/clima-energia-justicaclimatica" className="btn">Saiba Mais</a>
                 </div>
             </section>
 
@@ -47,7 +45,6 @@ const Home = () => {
                 <div className="grid-item item7">Inovação em IoT para um futuro mais eficiente.</div>
             </div>
 
-                {/* Seção solucao */}
             <section className="about container">
                 <div className="about-img2" id='solucao'> 
                     <img src={solucao} alt="Imagem da solução proposta" />

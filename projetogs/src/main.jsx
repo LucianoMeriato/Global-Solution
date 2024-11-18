@@ -5,24 +5,39 @@ import App from './App.jsx';
 import Error from './routes/Error.jsx';
 import Home from './routes/Home.jsx';
 import Login from './routes/Login.jsx';
+import Sobre from './routes/Sobre.jsx'; 
+import Cadastrar from './routes/Cadastrar.jsx';
+import Solucao from './routes/Solucao.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/', 
-    element: <App />, 
-    errorElement: <Error />, 
+    element: <App />, // Este é o componente principal que envolve todas as rotas filhas
+    errorElement: <Error />, // Caso ocorra um erro, renderiza o componente Error
     children: [
       {
         path: '', 
-        element: <Home />, 
+        element: <Home />, // Renderiza Home na raiz (path '/')
+      },
+      {
+        path: 'sobre', 
+        element: <Sobre />, // Renderiza Sobre
+      },
+      {
+        path: 'solucao',
+        element: <Solucao />, // Renderiza Solucao
       },
       {
         path: 'login', 
-        element: <Login />,
+        element: <Login />, // Renderiza Login
+      },
+      {
+        path: 'cadastrar',
+        element: <Cadastrar />, // Renderiza Cadastrar
       },
       {
         path: '*', 
-        element: <Error />, 
+        element: <Error />, // Qualquer caminho desconhecido renderiza o Error
       },
     ],
   },
@@ -30,6 +45,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} /> {/* Fornece o roteamento para a aplicação */}
   </StrictMode>
 );

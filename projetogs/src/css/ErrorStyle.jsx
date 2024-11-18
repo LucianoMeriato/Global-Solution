@@ -18,7 +18,7 @@ body {
         .error-code {
             font-size: 120px;
             margin: 0;
-            color: #00c3ff;
+            color: #66FF99;
             text-shadow: 2px 2px 0 #000;
         }
         .error-message {
@@ -38,7 +38,7 @@ body {
             transition: background-color 0.3s;
         }
         .homepage-link:hover {
-            background-color: #00c3ff;
+            background-color: #66FF99;
         }
         .social-icons {
             margin-top: 20px;
@@ -51,7 +51,7 @@ body {
             transition: color 0.3s;
         }
         .social-icon:hover {
-            color: #00c3ff;
+            color: #66FF99;
         }
     
 
