@@ -15,10 +15,10 @@ const Footer = () => {
        
             <section className="footer">
                 <div className="footer-container container">
-                    <h2>Energy clean</h2>
+                    <h2>Ecosense</h2>
                     <div className="footer-box">
                         <h3>Contato</h3>
-                        <a href="mailto:cleanenergy@energy.com">cleanenergy@energy.com</a>
+                        <a href="mailto:Ecosense@ecosense.com">Ecosense@ecosense.com</a>
                         <a href="tel:+11000000000">+11 00000-0000</a>
                     </div>
                     <div className="footer-box">

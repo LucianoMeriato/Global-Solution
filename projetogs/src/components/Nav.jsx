@@ -7,7 +7,7 @@ const Nav = () => {
             <header>
                 <div className="nav container">
                     <Link to="/" className="logo">
-                        <i className='bx bx-home'></i> Energy
+                        <i className='bx bx-home'></i> EcoSense
                     </Link>
 
                     <input type="checkbox" id="menu" />
