@@ -12,32 +12,32 @@ import Solucao from './routes/Solucao.jsx';
 const router = createBrowserRouter([
   {
     path: '/', 
-    element: <App />, // Este é o componente principal que envolve todas as rotas filhas
-    errorElement: <Error />, // Caso ocorra um erro, renderiza o componente Error
+    element: <App />,
+    errorElement: <Error />,
     children: [
       {
         path: '', 
-        element: <Home />, // Renderiza Home na raiz (path '/')
+        element: <Home />,
       },
       {
         path: 'sobre', 
-        element: <Sobre />, // Renderiza Sobre
+        element: <Sobre />,
       },
       {
         path: 'solucao',
-        element: <Solucao />, // Renderiza Solucao
+        element: <Solucao />,
       },
       {
         path: 'login', 
-        element: <Login />, // Renderiza Login
+        element: <Login />,
       },
       {
         path: 'cadastrar',
-        element: <Cadastrar />, // Renderiza Cadastrar
+        element: <Cadastrar />,
       },
       {
         path: '*', 
-        element: <Error />, // Qualquer caminho desconhecido renderiza o Error
+        element: <Error />,
       },
     ],
   },
@@ -45,6 +45,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} /> {/* Fornece o roteamento para a aplicação */}
+    <RouterProvider router={router} />
   </StrictMode>
 );

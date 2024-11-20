@@ -3,7 +3,6 @@ import { FooterStyle } from "../css/FooterStyle";
 const Footer = () => {
     return (
         <FooterStyle>
-
             <section className="newsletter container">
                 <h2>Entre em contato</h2>
                 <form action="">
@@ -12,7 +11,6 @@ const Footer = () => {
                 </form>
             </section>
 
-       
             <section className="footer">
                 <div className="footer-container container">
                     <h2>Ecosense</h2>
@@ -34,7 +32,6 @@ const Footer = () => {
                 </div>
             </section>
 
-      
             <div className="direitos">
                 <p>&copy; 2024 - Todos os direitos reservados</p>
             </div>

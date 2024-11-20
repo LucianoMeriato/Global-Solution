@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { LoginWrapper, LoginContainer, ImageContainer } from "../css/LoginStyle"; 
 import carro from "../assets/AbstractShape.png";
 
@@ -8,17 +9,27 @@ const Cadastrar = () => {
     const [email, setEmail] = useState("");
     const [telefone, setTelefone] = useState("");
     const [cpf, setCpf] = useState("");
+    const [senha, setSenha] = useState("");
     const [mensagem, setMensagem] = useState("");  
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (nome && email && telefone && cpf) {
-            setMensagem("Cadastro realizado com sucesso!");
-            // Redireciona para a página inicial após 2 segundos
-            setTimeout(() => navigate("/home"), 2000); 
-        } else {
-            setMensagem("Por favor, preencha todos os campos.");
+
+        try {
+            const response = await axios.post("http://localhost:5000/register", {
+                nome,
+                email,
+                telefone,
+                cpf,
+                senha,
+            });
+
+            setMensagem(response.data.message || "Cadastro realizado com sucesso!");
+            
+            setTimeout(() => navigate("/home"), 2000);
+        } catch (error) {
+            setMensagem(error.response?.data?.message || "Erro ao realizar o cadastro.");
         }
     };
 
@@ -71,6 +82,16 @@ const Cadastrar = () => {
                         placeholder="111.222.333-55" 
                         minLength="11" 
                         maxLength="11" 
+                        required 
+                    />
+                    <label htmlFor="senha">Senha</label>
+                    <input 
+                        type="password" 
+                        name="senha" 
+                        id="senha" 
+                        placeholder="********" 
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
                         required 
                     />
                     <input type="submit" value="Registrar" className="button" />
